@@ -42,15 +42,7 @@ const Navbar = () => {
             {/* Dropdown Menu */}
             {isMenuOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-purple-600 rounded-md shadow-lg py-1 border border-purple-400">
-                {/* <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-purple-500 transition-colors">
-                  Home
-                </a>
-                <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-purple-500 transition-colors">
-                  About
-                </a>
-                <a href="#" className="block px-4 py-2 text-sm text-white hover:bg-purple-500 transition-colors">
-                  Contact
-                </a> */}
+                
               </div>
             )}
           </div>
