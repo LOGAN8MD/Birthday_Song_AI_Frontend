@@ -1,5 +1,6 @@
-import React, { useRef, useState, useEffect, useRef as useReactRef } from "react";
+import React, {useState, useRef as useReactRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { url } from "../components/api";
 
 const CreateSong = () => {
   const location = useLocation();
@@ -109,7 +110,7 @@ const CreateSong = () => {
 
               <audio
                 ref={audioRef}
-                src={`http://localhost:5555${audioUrl}`}
+                src={url+audioUrl}
                 onEnded={handleEnded}
                 className="hidden"
               />

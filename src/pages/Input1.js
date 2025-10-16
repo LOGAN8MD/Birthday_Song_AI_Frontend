@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import LoadingComponent from "../components/LoadingComponent"
+import { url } from "../components/api";
+url
 
 const Input1 = () => {
   const navigate = useNavigate();
@@ -55,7 +57,7 @@ const Input1 = () => {
         extras: formData,
       };
 
-      const res = await fetch("https://birthday-song-ai-server.onrender.com/api/generate-lyrics", {
+      const res = await fetch(`${url}/api/generate-lyrics`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

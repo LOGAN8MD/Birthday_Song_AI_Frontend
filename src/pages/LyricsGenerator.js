@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import LoadingComponent from "../components/LoadingComponent";
+import { url } from "../components/api";
 
 const MAX_GENERATIONS = 3;
 
@@ -44,7 +45,7 @@ console.log("Person")
         gender: vibe?.voice || "",
       };
 
-      const res = await fetch("https://birthday-song-ai-server.onrender.com/api/generate-lyrics", {
+      const res = await fetch(`${url}/api/generate-lyrics`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -82,7 +83,7 @@ console.log("Person")
 
       console.log(payload)
 
-      const res = await fetch("https://birthday-song-ai-server.onrender.com/api/generate-audio", {
+      const res = await fetch(`${url}/api/generate-audio`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

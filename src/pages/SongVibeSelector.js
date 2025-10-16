@@ -57,7 +57,7 @@ const SongVibeSelector = () => {
       className={`flex flex-col items-center transition-transform transform hover:scale-105`}
     >
       <div
-        className={`w-15 h-15  rounded-full flex items-center justify-center mb-2 border-4 ${
+        className={`w-15 h-15  rounded-full flex  items-center justify-center mb-2 border-4 ${
           selected === item.id ? "bg-yellow-400 border-yellow-400" : "bg-white border-transparent"
         }`}
       >
@@ -87,13 +87,33 @@ const SongVibeSelector = () => {
         </div>
 
         {/* Decorative Image */}
-        <div className="mb-4 text-center">
-          <img
-            src="/assets/Headphone.png"
-            alt="Celebrations"
-            className="w-56  mx-auto mb-4"
-          />
-        </div>
+
+        <div className='max-w-md mx-auto'>
+          
+            <div className="flex justify-center  items-center mb-4 text-center">
+
+                <div className="flex h-52 items-end">
+                <img
+                  src="/assets/Purple Music Tone.png"
+                  alt="Celebrations"
+                  className="w-16 h-16  "
+              />
+            </div>
+              <img
+                  src="/assets/Headphone.png"
+                  alt="Celebrations"
+                  className="w-56  mx-auto mb-4"
+              />
+              <div className="flex h-52 ">
+                <img
+                    src="/assets/Balloon2.png"
+                    alt="Celebrations"
+                    className="w-16 h-16 "
+                />
+              </div>
+            </div>
+
+          </div>
 
         {/* Selection Cards */}
         <div className="max-w-lg mx-auto bg-opacity-90 rounded-3xl shadow-xl p-6 sm:p-8 space-y-8">
@@ -144,14 +164,17 @@ const SongVibeSelector = () => {
               ))}
             </div>
           </div>
-
+          
+          <div className="flex ">
           {/* Proceed Button */}
           <button
             onClick={handleProceed}
-            className="bg-yellow-400 text-purple-900 font-bold px-10 py-3 rounded-full shadow-md hover:bg-yellow-300 transition block mx-auto"
+            className="bg-yellow-400 text-purple-900 font-bold px-10 py-3 rounded-xl    shadow-md hover:bg-yellow-300 transition block mx-auto"
           >
             Proceed
           </button>
+          <img src="/assets/Asset 1.png" alt="Progress" className="w-8  " />
+          </div>
         </div>
       </div>
     </div>
