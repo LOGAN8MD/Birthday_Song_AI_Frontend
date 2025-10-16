@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import LoadingComponent from "../components/LoadingComponent"
 import { url } from "../components/api";
-url
+
 
 const Input1 = () => {
   const navigate = useNavigate();
