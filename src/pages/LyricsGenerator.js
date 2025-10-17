@@ -168,7 +168,7 @@ console.log("Person")
               <button
                 onClick={recreateLyrics}
                 disabled={recreateDisabled || loading}
-                className={`px-6 py-3 rounded-full font-bold shadow-md transition ${
+                className={`px-6 py-3 rounded-xl font-bold shadow-md transition ${
                   recreateDisabled
                     ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                     : "bg-yellow-400 text-purple-900 hover:bg-yellow-300"
@@ -183,7 +183,7 @@ console.log("Person")
 
               <button
                 onClick={createSong}
-                className="px-6 py-3 rounded-full font-bold shadow-md bg-yellow-400 text-purple-900 hover:opacity-90"
+                className="px-6 py-3 rounded-xl font-bold shadow-md bg-yellow-400 text-purple-900 hover:opacity-90"
               >
                 Create Song
               </button>

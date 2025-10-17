@@ -113,18 +113,37 @@ const Input1 = () => {
           </h2>
         </div>
 
-        <div className="mb-4 text-center">
+        <div className='max-w-md mx-auto'>
+      
+      <div className="flex justify-center  items-center mb-4 text-center">
+
+        <div className="flex h-50 items-end">
           <img
-            src="/assets/Message.png"
-            alt="Message"
-            className="w-56  mx-auto mb-4"
+            src="/assets/Asset 1.png"
+            alt="Celebrations"
+            className="w-16 h-16  "
           />
-        </div>
+       </div>
+        <img
+            src="/assets/Message.png"
+            alt="Celebrations"
+            className="w-56  mx-auto mb-4"
+        />
+        <div className="flex  ">
+            <img
+                src="/assets/Balloon.png"
+                alt="Celebrations"
+                className="w-16 h-16 "
+            />
+          </div>
+      </div>
+
+    </div>
 
         <div className="max-w-md mx-auto bg-opacity-90 rounded-3xl shadow-xl p-6 sm:p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-white font-medium mb-2">
+              <label className="block font-bold text-center text-white  mb-2">
                 What's your pet name for them?
               </label>
               <input
@@ -132,7 +151,7 @@ const Input1 = () => {
                 name="pet_name"
                 value={formData.pet_name}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
+                className={`w-full px-4 py-3 border font-bold text-purple-900 rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
                   errors.pet_name ? "border-red-500" : "border-gray-300"
                 }`}
                 placeholder="e.g. babe, champ"
@@ -143,7 +162,7 @@ const Input1 = () => {
             </div>
 
             <div>
-              <label className="block text-white font-medium mb-2">
+              <label className="block text-white font-bold text-center mb-2">
                 What makes them angry?
               </label>
               <input
@@ -151,7 +170,7 @@ const Input1 = () => {
                 name="angry"
                 value={formData.angry}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
+                className={`w-full px-4 py-3 font-bold text-purple-900 border rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
                   errors.angry ? "border-red-500" : "border-gray-300"
                 }`}
                 placeholder="e.g. late arrivals"
@@ -162,7 +181,7 @@ const Input1 = () => {
             </div>
 
             <div>
-              <label className="block text-white font-medium mb-2">
+              <label className="block text-white font-bold text-center mb-2">
                 What is the funniest thing they do?
               </label>
               <input
@@ -170,7 +189,7 @@ const Input1 = () => {
                 name="funniest"
                 value={formData.funniest}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
+                className={`w-full px-4 py-3 font-bold text-purple-900 border rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
                   errors.funniest ? "border-red-500" : "border-gray-300"
                 }`}
                 placeholder="e.g. dance moves"
@@ -181,7 +200,7 @@ const Input1 = () => {
             </div>
 
             <div>
-              <label className="block text-white font-medium mb-2">
+              <label className="block text-white font-bold text-center mb-2">
                 What makes them smile?
               </label>
               <input
@@ -189,7 +208,7 @@ const Input1 = () => {
                 name="smile"
                 value={formData.smile}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
+                className={`w-full px-4 py-3 border  font-bold text-purple-900 rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
                   errors.smile ? "border-red-500" : "border-gray-300"
                 }`}
                 placeholder="e.g. warm hugs"
@@ -200,7 +219,7 @@ const Input1 = () => {
             </div>
 
             <div>
-              <label className="block text-white font-medium mb-2">
+              <label className="block text-white font-bold text-center mb-2">
                 What is their favourite movie?
               </label>
               <input
@@ -208,7 +227,7 @@ const Input1 = () => {
                 name="movie"
                 value={formData.movie}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
+                className={`w-full px-4 py-3 border font-bold text-purple-900 rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
                   errors.movie ? "border-red-500" : "border-gray-300"
                 }`}
                 placeholder="e.g. Inception"
@@ -219,7 +238,7 @@ const Input1 = () => {
             </div>
 
             <div>
-              <label className="block text-white font-medium mb-2">
+              <label className="block text-white font-bold text-center mb-2">
                 Their favourite sport.
               </label>
               <input
@@ -227,7 +246,7 @@ const Input1 = () => {
                 name="sport"
                 value={formData.sport}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
+                className={`w-full px-4 py-3 border font-bold text-purple-900 rounded-2xl focus:ring-2 focus:border-transparent transition-all ${
                   errors.sport ? "border-red-500" : "border-gray-300"
                 }`}
                 placeholder="e.g. cricket"
@@ -243,7 +262,7 @@ const Input1 = () => {
                 disabled={loading}
                 className={`${
                   loading ? "opacity-60 cursor-not-allowed" : ""
-                } bg-yellow-400 text-purple-900 font-bold px-10 py-3 rounded-full shadow-md hover:bg-yellow-300 transition`}
+                } bg-yellow-400 text-purple-900 font-bold px-10 py-3 rounded-xl shadow-md hover:bg-yellow-300 transition`}
               >
                 {loading ? "Generating..." : "Proceed"}
               </button>
@@ -254,7 +273,7 @@ const Input1 = () => {
             )}
           </form>
 
-          <p className="text-xs text-gray-500 text-center mt-4">* Required fields</p>
+         
         </div>
       </div>
     </div>

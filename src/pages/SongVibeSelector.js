@@ -54,73 +54,73 @@ const SongVibeSelector = () => {
   const OptionCard = ({ item, selected, onSelect }) => (
     <button
       onClick={() => onSelect(item.id)}
-      className={`flex flex-col items-center transition-transform transform hover:scale-105`}
+      className={`flex flex-col m-a items-center transition-transform transform hover:scale-105`}
     >
       <div
-        className={`w-15 h-15  rounded-full flex  items-center justify-center mb-2 border-4 ${
+        className={`w-7 h-7  rounded-full flex  items-center justify-center mb-2 border-4 ${
           selected === item.id ? "bg-yellow-400 border-yellow-400" : "bg-white border-transparent"
         }`}
       >
-        <img src={item.img} alt={item.label} className="w-9 h-9 object-contain" />
+        <img src={item.img} alt={item.label} className="w-5 h-5 object-contain" />
       </div>
-      <span className="text-sm sm:text-base text-white font-medium">{item.label}</span>
+      <span className="text-[10px] sm:text-base text-white font-medium">{item.label}</span>
     </button>
   );
 
   return (
-    <div className="min-h-screen pt-16">
-      <div className="container mx-auto px-4 py-8">
-        {/* Progress Bar */}
-        <div className="mb-4">
+<div className="min-h-screen pt-16">
+  <div className="container  mx-auto px-4 py-8">
+    {/* Progress Bar */}
+    <div className="mb-4">
+      <img
+        src="/assets/progress bar2.png"
+        alt="Progress"
+        className="w-48  mx-auto mb-4"
+      />
+    </div>
+
+    {/* Title */}
+    <div className="mb-4">
+      <h2 className="text-1xl sm:text-2xl font-bold text-center text-white mb-6">
+        What would you like their song's vibe to be?
+      </h2>
+    </div>
+
+    {/* Decorative Image */}
+
+    <div className='max-w-md mx-auto'>
+      
+      <div className="flex justify-center  items-center mb-4 text-center">
+
+        <div className="flex h-52 items-end">
           <img
-            src="/assets/progress bar2.png"
-            alt="Progress"
-            className="w-48  mx-auto mb-4"
+            src="/assets/Purple Music Tone.png"
+            alt="Celebrations"
+            className="w-16 h-16  "
           />
-        </div>
-
-        {/* Title */}
-        <div className="mb-4">
-          <h2 className="text-1xl sm:text-2xl font-bold text-center text-white mb-6">
-            What would you like their song's vibe to be?
-          </h2>
-        </div>
-
-        {/* Decorative Image */}
-
-        <div className='max-w-md mx-auto'>
-          
-            <div className="flex justify-center  items-center mb-4 text-center">
-
-                <div className="flex h-52 items-end">
-                <img
-                  src="/assets/Purple Music Tone.png"
-                  alt="Celebrations"
-                  className="w-16 h-16  "
-              />
-            </div>
-              <img
-                  src="/assets/Headphone.png"
-                  alt="Celebrations"
-                  className="w-56  mx-auto mb-4"
-              />
-              <div className="flex h-52 ">
-                <img
-                    src="/assets/Balloon2.png"
-                    alt="Celebrations"
-                    className="w-16 h-16 "
-                />
-              </div>
-            </div>
-
+       </div>
+        <img
+            src="/assets/Headphone.png"
+            alt="Celebrations"
+            className="w-56  mx-auto mb-4"
+        />
+        <div className="flex h-52 ">
+            <img
+                src="/assets/Balloon2.png"
+                alt="Celebrations"
+                className="w-16 h-16 "
+            />
           </div>
+      </div>
 
+    </div>
+
+      <div className=" relative">
         {/* Selection Cards */}
-        <div className="max-w-lg mx-auto bg-opacity-90 rounded-3xl shadow-xl p-6 sm:p-8 space-y-8">
-
+        <div className="max-w-lg relative z-10  mx-auto bg-opacity-90 rounded-3xl shadow-xl p-6 sm:p-8 space-y-8 
+                        h-[390px] overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-purple-800/20">
           {/* Mood Section */}
-          <div className="bg-purple-800/40 rounded-2xl  border-4 border-yellow-400">
-          
+          <div className="bg-purple-800/40 rounded-2xl  mt-2 border-4 border-yellow-400">
             <h3 className="text-xl font-semibold mb-4 text-center text-bg-purple-800/40 bg-yellow-400">Mood</h3>
             <div className="flex justify-around flex-wrap gap-4">
               {moods.map((mood) => (
@@ -129,12 +129,11 @@ const SongVibeSelector = () => {
                   item={mood}
                   selected={selectedMood}
                   onSelect={setSelectedMood}
-                  
                 />
               ))}
             </div>
           </div>
-
+          
           {/* Genre Section */}
           <div className="bg-purple-800/40 rounded-2xl border-4 border-yellow-400">
             <h3 className="text-xl font-semibold mb-4 text-center text-bg-purple-800/40 bg-yellow-400">Genre</h3>
@@ -151,7 +150,7 @@ const SongVibeSelector = () => {
           </div>
 
           {/* Singer’s Voice Section */}
-          <div className="bg-purple-800/40 rounded-2xl border-4 border-yellow-400">
+          <div className="bg-purple-800/40 mb-[100%] rounded-2xl border-4 border-yellow-400">
             <h3 className="text-xl font-semibold mb-4 text-center text-bg-purple-800/40 bg-yellow-400">Singer’s Voice</h3>
             <div className="flex justify-center gap-8">
               {voices.map((voice) => (
@@ -163,21 +162,32 @@ const SongVibeSelector = () => {
                 />
               ))}
             </div>
+          </div>   
+
+          <div className=" h-[17%]">
+                
           </div>
           
-          <div className="flex ">
-          {/* Proceed Button */}
+
+        
+        </div>
+
+        <div className=" flex absolute z-20 w-[100%] h-[30%] top-[300px] bg-opacity-60  bg-[#280051]   items-center justify-center  ">
+          <div className="flex  items-center justify-center w-[80%] h-[100%] bg-opacity-50  gap-3">
           <button
             onClick={handleProceed}
-            className="bg-yellow-400 text-purple-900 font-bold px-10 py-3 rounded-xl    shadow-md hover:bg-yellow-300 transition block mx-auto"
+            className="bg-yellow-400  text-purple-900 font-bold px-10 py-3 rounded-xl shadow-md hover:bg-yellow-300 transition"
           >
             Proceed
           </button>
-          <img src="/assets/Asset 1.png" alt="Progress" className="w-8  " />
+          <img src="/assets/Asset 1.png" alt="Progress" className="w-8" />
           </div>
         </div>
+
       </div>
-    </div>
+
+  </div>
+</div>
   );
 };
 

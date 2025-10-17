@@ -243,20 +243,24 @@ const UserDetailsPage = () => {
 
             {/* Submit */}
 
-                <div className="flex space-x-[76px]">
+                <div className="flex ">
+                  <div className="flex w-[35%]">
                    <img src="/assets/Asset 1.png" alt="Progress" className="w-16  " />
+                  </div>
+                  <div className='flex justify-start  '>
                   <button
                     type="submit"
-                    className="h-14 bg-yellow-400 text-purple-900 font-bold px-10 py-3 rounded-xl shadow-md hover:bg-yellow-300 transition block mx-auto"
+                    className="h-14 bg-yellow-400 text-purple-900 font-bold px-10 py-3 rounded-xl shadow-md hover:bg-yellow-300 transition block "
                   >
                     Submit
                   </button>  
+                  </div>
                 </div>
                 
           </form>
 
         
-            <p className="text-xs text-gray-500 text-center mt-4">* Required fields</p>
+           
               
 
         </div>
